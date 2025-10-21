@@ -3,9 +3,9 @@ import { useNavigate, Link } from 'react-router-dom';
 import type { User } from '../types';
 
 const mockUsers = [
-  { email: "artisan@artisana.com", password: "artisan123", role: "artisan" },
-  { email: "client@artisana.com", password: "client123", role: "client" },
-  { email: "admin@artisana.com", password: "admin123", role: "admin" },
+  { email: "artisan@example.com", password: "artisan123", role: "artisan" },
+  { email: "client@example.com", password: "client123", role: "client" },
+  { email: "admin@example.com", password: "admin123", role: "admin" },
 ];
 
 const SignInPage: React.FC = () => {
