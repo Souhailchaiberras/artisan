@@ -54,6 +54,7 @@ const Header: React.FC = () => {
     if (!user) {
         return (
           <>
+            <NavLink to="/Home" className={({ isActive }) => `${navLinkClasses} ${isActive ? activeLinkClasses : ''}`}>Home</NavLink>
             <NavLink to="/products" className={({ isActive }) => `${navLinkClasses} ${isActive ? activeLinkClasses : ''}`}>Shop</NavLink>
             <NavLink to="/about" className={({ isActive }) => `${navLinkClasses} ${isActive ? activeLinkClasses : ''}`}>Our Story</NavLink>
           </>
@@ -64,6 +65,7 @@ const Header: React.FC = () => {
       case 'client':
         return (
           <>
+            <NavLink to="/Home" className={({ isActive }) => `${navLinkClasses} ${isActive ? activeLinkClasses : ''}`}>Home</NavLink>
             <NavLink to="/client" className={({ isActive }) => `${navLinkClasses} ${isActive ? activeLinkClasses : ''}`}>Shop</NavLink>
             <NavLink to="/about" className={({ isActive }) => `${navLinkClasses} ${isActive ? activeLinkClasses : ''}`}>Our Story</NavLink>
           </>
@@ -88,6 +90,7 @@ const Header: React.FC = () => {
     if (!user) {
         return (
           <>
+            <NavLink to="/Home" className={({ isActive }) => `${navLinkClasses} ${isActive ? activeLinkClasses : ''}`} onClick={closeMenu}>Home</NavLink>
             <NavLink to="/products" className={({ isActive }) => `${navLinkClasses} ${isActive ? activeLinkClasses : ''}`} onClick={closeMenu}>Shop</NavLink>
             <NavLink to="/about" className={({ isActive }) => `${navLinkClasses} ${isActive ? activeLinkClasses : ''}`} onClick={closeMenu}>Our Story</NavLink>
           </>
@@ -98,6 +101,7 @@ const Header: React.FC = () => {
       case 'client':
         return (
           <>
+            <NavLink to="/Home" className={({ isActive }) => `${navLinkClasses} ${isActive ? activeLinkClasses : ''}`} onClick={closeMenu}>Home</NavLink>
             <NavLink to="/client" className={({ isActive }) => `${navLinkClasses} ${isActive ? activeLinkClasses : ''}`} onClick={closeMenu}>Shop</NavLink>
             <NavLink to="/about" className={({ isActive }) => `${navLinkClasses} ${isActive ? activeLinkClasses : ''}`} onClick={closeMenu}>Our Story</NavLink>
           </>

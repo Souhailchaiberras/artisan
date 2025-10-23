@@ -44,7 +44,7 @@ const HomePage: React.FC = () => {
       {/* Hero Section */}
       <section 
         className="h-[calc(100vh-80px)] min-h-[500px] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: "url('https://picsum.photos/seed/morocco/1600/900')" }}
+        style={{ backgroundImage: "url('https://i.pinimg.com/1200x/0e/53/6a/0e536a1525626dec94384cf97f4e64ee.jpg')" }}
       >
         <div className="container mx-auto px-6 text-center bg-black bg-opacity-40 p-10 rounded-lg">
           <h1 className="text-4xl md:text-6xl font-bold text-white font-montserrat leading-tight">
@@ -67,7 +67,7 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-deep-green font-montserrat mb-2">Nos Artisans</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">Découvrez les artisans talentueux derrière nos créations authentiques.</p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6  mx-10">
             {featuredArtisans.map(artisan => (
               <Link to={`/products?artisan=${artisan.name}`} key={artisan.name} className="block p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
                 <img 
@@ -88,7 +88,8 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center text-deep-green font-montserrat mb-2">Featured Products</h2>
           <p className="text-center text-gray-600 mb-10">Handpicked just for you.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-10">
             {featuredProducts.map(product => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -106,9 +107,9 @@ const HomePage: React.FC = () => {
 
       {/* Artisan Story Section */}
       <section className="bg-deep-green text-white py-20">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+        <div className="container mx-8 px-12 flex flex-col md:flex-row items-center gap-0">
           <div className="md:w-1/2">
-            <img src="https://picsum.photos/seed/artisan-work/600/400" alt="Artisan working" className="rounded-lg shadow-lg" />
+            <img src="https://picsum.photos/seed/artisan-work/530/330" alt="Artisan working" className="rounded-lg shadow-lg" />
           </div>
           <div className="md:w-1/2 text-center md:text-left">
             <h2 className="text-3xl font-bold text-sand-beige font-montserrat mb-4">Meet the Artisans</h2>
@@ -117,7 +118,7 @@ const HomePage: React.FC = () => {
             </p>
             <Link 
               to="/about"
-              className="bg-sand-beige text-deep-green font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-transform duration-300 hover:scale-105"
+              className="bg-sand-beige text-deep-green font-bold py-2 px-8 rounded-full hover:bg-opacity-90 transition-transform duration-300 hover:scale-105"
             >
               Our Story
             </Link>

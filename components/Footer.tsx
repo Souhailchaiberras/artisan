@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Footer: React.FC = () => {
   return (
     <footer className="bg-deep-green text-white">
-      <div className="container mx-auto px-6 py-12">
+      <div className="container mx-auto px-6 py-1">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About */}
           <div>
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold text-sand-beige mb-4">Contact Us</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>Email: support@artisanamaroc.com</li>
+              <li>Email: support@artisan.com</li>
               <li>Phone: +212 5 00 00 00 00</li>
               <li>Marrakech, Morocco</li>
             </ul>
@@ -54,9 +54,9 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-center">
+        <div className="mt-10 pt-2 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-center">
           <p className="text-gray-400">&copy; {new Date().getFullYear()} Artisana Maroc. All Rights Reserved.</p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
+          <div className="flex space-x-2 mt-1 md:mt-0">
             {/* Social Icons Placeholder */}
             <a href="#" className="hover:text-light-gold transition-colors">FB</a>
             <a href="#" className="hover:text-light-gold transition-colors">IG</a>

@@ -36,6 +36,7 @@ export const products: Product[] = [
   {
     id: 'prod-1',
     name: 'Fassi Blue Ceramic Vase',
+    location: 'Tanger',
     description: 'A hand-painted ceramic vase featuring the iconic deep blue patterns of Fes. Perfect for adding a touch of Moroccan elegance to any room.',
     price: 75.00,
     imageUrl: 'https://picsum.photos/seed/vase/400/400',
@@ -48,6 +49,7 @@ export const products: Product[] = [
   {
     id: 'prod-2',
     name: 'Marrakchi Leather Babouches',
+    location: 'Tanger',
     description: 'Authentic leather slippers, handcrafted in Marrakech. Soft, comfortable, and durable for indoor wear.',
     price: 45.50,
     imageUrl: 'https://picsum.photos/seed/slippers/400/400',
@@ -60,6 +62,7 @@ export const products: Product[] = [
   {
     id: 'prod-3',
     name: 'Berber Wool Rug',
+    location: 'Tanger',
     description: 'A plush, hand-woven wool rug with traditional Berber motifs. This unique piece brings warmth and history to your home.',
     price: 350.00,
     imageUrl: 'https://picsum.photos/seed/rug/400/400',
@@ -72,6 +75,7 @@ export const products: Product[] = [
   {
     id: 'prod-4',
     name: 'Thuya Wood Jewelry Box',
+    location: 'Tanger',
     description: 'An exquisitely carved box made from aromatic Thuya wood burl, ideal for storing precious jewelry.',
     price: 90.00,
     imageUrl: 'https://picsum.photos/seed/box/400/400',
@@ -84,6 +88,7 @@ export const products: Product[] = [
   {
     id: 'prod-5',
     name: 'Hand-hammered Brass Lantern',
+    location: 'Tanger',
     description: 'Create a magical ambiance with this intricate brass lantern. It casts beautiful patterns of light when lit.',
     price: 120.00,
     imageUrl: 'https://picsum.photos/seed/lantern/400/400',
@@ -96,6 +101,7 @@ export const products: Product[] = [
   {
     id: 'prod-6',
     name: 'Tamegroute Green Pottery Bowl',
+    location: 'Tanger',
     description: 'A rustic and unique bowl from the Tamegroute village, known for its distinctive green glaze.',
     price: 55.00,
     imageUrl: 'https://picsum.photos/seed/bowl/400/400',
@@ -108,6 +114,7 @@ export const products: Product[] = [
   {
     id: 'prod-7',
     name: 'Silver Hamsa Necklace',
+    location: 'Tanger',
     description: 'A delicate silver necklace featuring the Hand of Fatima (Hamsa), a symbol of protection.',
     price: 85.00,
     imageUrl: 'https://picsum.photos/seed/necklace/400/400',
@@ -120,6 +127,7 @@ export const products: Product[] = [
   {
     id: 'prod-8',
     name: 'Handwoven Sabra Silk Scarf',
+    location: 'Casablanca',
     description: 'A vibrant and soft scarf made from cactus silk (Sabra). Its colors shimmer and change in the light.',
     price: 60.00,
     imageUrl: 'https://picsum.photos/seed/scarf/400/400',
@@ -147,7 +155,7 @@ export const pendingArtisans = [
       specialty: 'Poterie', 
       city: 'Fès',
       registrationDate: '2023-10-26',
-      photoUrl: 'https://picsum.photos/seed/person1/100/100'
+      photoUrl: 'https://i.pinimg.com/736x/63/84/06/6384062fa6f8562ad9f5578773e88987.jpg'
     },
     { 
       id: 'art-102', 
@@ -156,7 +164,7 @@ export const pendingArtisans = [
       specialty: 'Maroquinerie',
       city: 'Marrakech',
       registrationDate: '2023-10-24',
-      photoUrl: 'https://picsum.photos/seed/person2/100/100'
+      photoUrl: 'https://i.pinimg.com/1200x/67/25/69/672569deec33c2c514fdc9b1bd4ba883.jpg'
     },
     { 
       id: 'art-103', 

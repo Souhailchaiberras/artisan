@@ -40,6 +40,7 @@ const ClientDashboard: React.FC = () => {
     return allProducts
       .filter(product => {
         const matchesCategory = filters.category === 'all' || product.category === filters.category;
+        const locationMatch = filters.location === 'all' || product.location === filters.location;
         const matchesPrice = product.price <= filters.price;
         const matchesRating = product.rating >= filters.rating;
         const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) || 

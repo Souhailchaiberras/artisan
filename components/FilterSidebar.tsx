@@ -1,10 +1,10 @@
-
 import React from 'react';
-import { ProductCategory } from '../types';
+import { ProductCategory, Location } from '../types';
 
 interface FilterSidebarProps {
   filters: {
     category: string;
+    location: string;
     price: number;
     rating: number;
   };
@@ -14,6 +14,10 @@ interface FilterSidebarProps {
 const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFilterChange }) => {
   const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     onFilterChange({ ...filters, category: e.target.value });
+  };
+
+  const handleLocationChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    onFilterChange({ ...filters, location: e.target.value });
   };
 
   const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -40,6 +44,22 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({ filters, onFilterChange }
           <option value="all">All Categories</option>
           {Object.values(ProductCategory).map(cat => (
             <option key={cat} value={cat}>{cat}</option>
+          ))}
+        </select>
+      </div>
+
+      {/* Location Filter */}
+      <div className="mb-6">
+        <label htmlFor="location" className="block text-md font-semibold text-gray-700 mb-2">Location</label>
+        <select
+          id="location"
+          value={filters.location}
+          onChange={handleLocationChange}
+          className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-terracotta"
+        >
+          <option value="all">All Locations</option>
+          {Object.values(Location).map(loc => (
+            <option key={loc} value={loc}>{loc}</option>
           ))}
         </select>
       </div>

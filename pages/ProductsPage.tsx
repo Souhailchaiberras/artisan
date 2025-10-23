@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo } from 'react';
 import ProductCard from '../components/ProductCard';
 import FilterSidebar from '../components/FilterSidebar';
@@ -10,6 +9,7 @@ const ProductsPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filters, setFilters] = useState({
     category: 'all',
+    location: 'all',  // ← AJOUTÉ ICI
     price: 500,
     rating: 0,
   });
@@ -22,22 +22,20 @@ const ProductsPage: React.FC = () => {
     return allProducts
       .filter(product => {
         const matchesCategory = filters.category === 'all' || product.category === filters.category;
+        const matchesLocation = filters.location === 'all' || product.location === filters.location; // ← CORRIGÉ
         const matchesPrice = product.price <= filters.price;
         const matchesRating = product.rating >= filters.rating;
         const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
                               product.description.toLowerCase().includes(searchTerm.toLowerCase());
-        return matchesCategory && matchesPrice && matchesRating && matchesSearch;
+        return matchesCategory && matchesLocation && matchesPrice && matchesRating && matchesSearch; // ← AJOUTÉ matchesLocation
       });
   }, [filters, searchTerm]);
 
   return (
     <div className="container mx-auto px-6 py-8">
-      <div className="bg-sand-beige p-8 rounded-lg mb-8 text-center">
-          <h1 className="text-4xl font-bold text-terracotta font-montserrat">Our Collection</h1>
-          <p className="text-deep-green mt-2">Explore the rich tapestry of Moroccan craftsmanship.</p>
-      </div>
       
-      <div className="flex flex-col lg:flex-row gap-8">
+      
+      <div className="flex flex-col lg:flex-row gap-8 mx-2">
         {/* Filters */}
         <aside className="lg:w-1/4">
           <FilterSidebar filters={filters} onFilterChange={handleFilterChange} />
@@ -55,7 +53,7 @@ const ProductsPage: React.FC = () => {
             />
           </div>
           {filteredProducts.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 mx-0">
               {filteredProducts.map(product => (
                 <ProductCard key={product.id} product={product} />
               ))}
