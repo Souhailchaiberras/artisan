@@ -11,6 +11,7 @@ export interface Artisan {
 export interface Product {
   id: string;
   name: string;
+  location: string,
   description: string;
   price: number;
   imageUrl: string;
@@ -28,6 +29,16 @@ export enum ProductCategory {
   JEWELRY = 'Jewelry',
   WOODWORK = 'Woodwork',
   LANTERNS = 'Lanterns'
+}
+
+export enum Location {
+  TANGER = 'Tanger',
+  CASABLANCA = 'Casablanca',
+  MARRAKECH = 'Marrakech',
+  FES = 'Fès',
+  RABAT = 'Rabat',
+  ESSAOUIRA = 'Essaouira',
+  AGADIR = 'Agadir'
 }
 
 export interface User {
